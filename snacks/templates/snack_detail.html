@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+{% block main %}
+  <div>
+    <h2>{{ snack.name }}</h2>
+    <p>Purchaser: {{ snack.purchaser }}</p>
+    <p>Description: {{ snack.description }}</p>
+    <a href="{% url 'snack_update' snack.pk %}">+ Update snack</a>
+    <a href="{% url 'snack_delete' snack.pk %}">+ Delete snack</a>
+  </div>
+
+{% endblock main %}
